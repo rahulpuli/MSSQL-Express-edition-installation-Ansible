@@ -1,0 +1,6 @@
+---
+- name: Download MS SQL 2017 Express Version from Microsoft Site
+  win_get_url:
+    url: "{{ sql_exp_2017 }}"
+    dest: "{{ data_folder }}/SQLEXPRADV_x64_ENU.exe"
+    force: no

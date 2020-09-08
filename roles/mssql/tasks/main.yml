@@ -1,0 +1,32 @@
+---
+# tasks file for mssql
+- include: createtemporaryfolder.yml
+
+#--------------Install .Net 3.5,4.5 -------------------------
+- include: install_dotnet3.5.yml      
+- include: install_dotnet4.5.yml
+
+
+#----------- Download MSSQL Express edition --------------------
+- include: download_sqlexpress2012.yml
+#- include: download_sqlexpress2014.yml
+#- include: download_sqlexpress2016.yml
+#- include: download_sqlexpress2017.yml
+#- include: download_sqlexpress2019.yml
+
+#------------------Extract setup.exe file---------------------------
+- include: extract_sqlexpress_setup.yml
+
+#------------------Create Express Configuration file ---------------
+- include: mssql_exp_configuration_file.yml
+
+#-----------------Install MSSQL Express Edition --------------------
+- include: run_mssql_exp_setup.yml           #Check the Product ID Before running
+
+
+#------------Download and install latest SSMS -------------------------------
+- include: download_ssms.yml 
+- include: install_ssms.yml  
+
+#-----------Remove Configuration File ---------------------------------------
+- include: remove_mssql_exp_configuration_file.yml

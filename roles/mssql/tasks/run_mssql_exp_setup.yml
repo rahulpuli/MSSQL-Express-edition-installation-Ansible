@@ -1,0 +1,6 @@
+---
+- name: mssql  Installation
+  win_package:
+    path: '{{ data_folder }}\{{ exp_adv }}\setup.exe'
+    product_id: '{ sql_exp_id_2012 }' #Change the product_id depend on the setup version
+    arguments: '/IAcceptSQLServerLicenseTerms /q /ConfigurationFile={{ data_folder }}\mssql_exp_configuration.ini'

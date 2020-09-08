@@ -1,0 +1,6 @@
+---
+- name: Extract the SQLsetupfile.exe
+  win_shell: Start-Process -PSPath "{{ data_folder }}\SQLEXPRADV_x64_ENU.exe" -ArgumentList '/extract:c:\temporary\SQLEXPRADV_x64_ENU /Q' -Wait
+  args:
+   chdir: "{{ data_folder }}"  #Setup files will be extracted to directory
+
