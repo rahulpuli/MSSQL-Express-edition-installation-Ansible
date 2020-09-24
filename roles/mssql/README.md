@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role is created for making installation of MS SQL Server 2012,2014,2016,2017,2019 automated.
 
 Requirements
 ------------
